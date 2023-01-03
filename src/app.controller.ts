@@ -15,7 +15,8 @@ export class AppController {
 
  @MessagePattern('create-user')
   async create(@Payload() data: any): Promise<UserEntity> {
-     return await this.appService.create(data)
+    this.logger.log(`User: ${JSON.stringify(data)} `)
+     return await this.appService.create(data.value)
  }
 
 }
