@@ -14,6 +14,11 @@ export class AppController {
      return await this.appService.list()
  }
 
+ @MessagePattern('find-user')
+  async find(@Payload() data: any): Promise<User> {
+     return await this.appService.find(Number(data.value.id))
+ }
+
  @MessagePattern('create-user')
   async create(@Payload() data: User): Promise<UserEntity> {
     this.logger.log(`User: ${JSON.stringify(data)} `)
