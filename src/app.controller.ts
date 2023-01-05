@@ -25,4 +25,10 @@ export class AppController {
      return await this.appService.create(data)
  }
 
+ @MessagePattern('update-user')
+ async update(@Payload() data: User): Promise<void> {
+   this.logger.log(`User: ${JSON.stringify(data)} `)
+    return await this.appService.create(data)
+}
+
 }
