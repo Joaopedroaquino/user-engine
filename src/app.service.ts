@@ -14,6 +14,20 @@ public async  create(user: User): Promise <UserEntity> {
       return  await this.userRepository.save(user)
   }
 
+  public async  update(userData: UserEntity): Promise <void> {
+
+    const {id, name, email, phone, password} = userData
+    const user = await this.find(id)
+     
+    user.name = name ? name : user.name
+    user.phone = phone ? phone : user.phone
+    user.email = email ? email : user.email
+    user.password = password ? password : user.password
+
+    await this.userRepository.save(user)
+
+
+}
 public async  list(): Promise <UserEntity[]> {
       return await this.userRepository.find()
   }
