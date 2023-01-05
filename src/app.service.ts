@@ -41,4 +41,10 @@ public async  list(): Promise <UserEntity[]> {
 public async  delete(id: number): Promise <void> {
 await this.userRepository.delete({id})}
 
+public async  activate(id: number): Promise <void> {
+  await this.userRepository.delete({id})}
+
+  public async  inactivate(id: number): Promise <void> {
+    await this.userRepository.delete({id})}
+
 }
