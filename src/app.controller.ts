@@ -31,4 +31,9 @@ export class AppController {
      await this.appService.update(data)
 }
 
+@MessagePattern('delete-user')
+  async remove(@Payload() data: any): Promise<void> {
+     return await this.appService.delete(Number(data.value.id))
+ }
+
 }
