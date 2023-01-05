@@ -38,4 +38,7 @@ public async  list(): Promise <UserEntity[]> {
     return response
 }
 
+public async  delete(id: number): Promise <void> {
+await this.userRepository.delete({id})}
+
 }
