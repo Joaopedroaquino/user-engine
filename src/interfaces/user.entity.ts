@@ -12,4 +12,7 @@ export class UserEntity {
     phone: string
     @Column()
     password: string
+    @Column({default: 'ACTIVATE'})
+    status: 'ACTIVATE' | 'INACTIVATE'
+
 }
