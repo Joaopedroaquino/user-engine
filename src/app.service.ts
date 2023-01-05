@@ -45,6 +45,6 @@ public async  activate(id: number): Promise <void> {
   await this.userRepository.update(id,{status: 'ACTIVATE'})}
 
   public async  inactivate(id: number): Promise <void> {
-    await this.userRepository.delete({id})}
+    await this.userRepository.update(id,{status: 'INACTIVATE'})}
 
 }
