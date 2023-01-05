@@ -36,4 +36,9 @@ export class AppController {
      return await this.appService.delete(Number(data.value.id))
  }
 
+ @MessagePattern('activate-user')
+  async activate(@Payload() data: any): Promise<void> {
+     return await this.appService.activate(Number(data.value.id))
+ }
+
 }
