@@ -41,4 +41,9 @@ export class AppController {
      return await this.appService.activate(Number(data.value.id))
  }
 
+ @MessagePattern('inactivate-user')
+ async inactivate(@Payload() data: any): Promise<void> {
+    return await this.appService.inactivate(Number(data.value.id))
+}
+
 }
