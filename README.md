@@ -12,6 +12,7 @@
 
 
 ## Description
+  <p>Service owned by a notifications-service API gateway</p>
   <a href="https://github.com/Joaopedroaquino/user-engine"><img src="https://img.shields.io/badge/Microservice-User--Engine-green?style=for-the-badge" alt="user-engine" /></a>
 
 
