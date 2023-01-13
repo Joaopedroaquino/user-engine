@@ -20,6 +20,7 @@
 
 ```bash
 $ yarn install
+$ npm i
 ```
 
 ## Running the app
