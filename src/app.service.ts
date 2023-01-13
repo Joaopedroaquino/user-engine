@@ -14,6 +14,8 @@ public async  create(user: User): Promise <UserEntity> {
       return  await this.userRepository.save(user)
   }
 
+  //ref userEntity
+
   public async  update(userData: UserEntity): Promise <void> {
 
     const {id, name, email, phone, password} = userData
